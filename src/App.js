@@ -6,7 +6,12 @@ import ExpenseTotal from './components/ExpenseTotal';
 import ExpenseList from './components/ExpenseList';
 import AllocationForm from './components/AllocationForm';
 import RemainingBudget from './components/Remaining';
+import Currency from './components/Currency';
 const App = () => {
+    const columnStyle = {
+        flex: '5',
+        maxWidth: '20%', // Adjust the max-width as desired
+      };
     return (
         <AppProvider>
             <div className='container'>
@@ -20,6 +25,9 @@ const App = () => {
                     </div>
                     <div className='col-sm'>
                         <ExpenseTotal />
+                    </div>
+                    <div className="col-sm" style={columnStyle}>
+                        <Currency />
                     </div>
                 </div>
                 <h3 className='mt-3'>Allocation</h3>
